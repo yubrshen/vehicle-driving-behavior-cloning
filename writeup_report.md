@@ -1,5 +1,35 @@
 #**Autonomous Car Steering by Behaviro Cloning of Neural Network**
 
+
+Table of Contents
+=================
+
+   * [<strong>Autonomous Car Steering by Behaviro Cloning of Neural Network</strong>](#autonomous-car-steering-by-behaviro-cloning-of-neural-network)
+      * [Introduction](#introduction)
+      * [Files Submitted and Software Modules](#files-submitted-and-software-modules)
+      * [Human Steering Samples](#human-steering-samples)
+         * [The utility of left/right camaras' images](#the-utility-of-leftright-camaras-images)
+      * [Augmentation and Pre-processing](#augmentation-and-pre-processing)
+         * [Steering angle distribution and adjustment](#steering-angle-distribution-and-adjustment)
+         * [Samples preparation for training and validation with filtering by small steering angles](#samples-preparation-for-training-and-validation-with-filtering-by-small-steering-angles)
+         * [Further augmentation and pre-processing](#further-augmentation-and-pre-processing)
+            * [Emulate recovery from off-center examples](#emulate-recovery-from-off-center-examples)
+            * [Shadow emulation](#shadow-emulation)
+            * [Geometry transformation and normalization of color intensity](#geometry-transformation-and-normalization-of-color-intensity)
+            * [Flipping image and negate steering](#flipping-image-and-negate-steering)
+            * [Not all data are equally helpful!](#not-all-data-are-equally-helpful)
+            * [Effects of processing](#effects-of-processing)
+            * [Sample generator](#sample-generator)
+      * [Network Architecture for Steering Angle Predictions](#network-architecture-for-steering-angle-predictions)
+      * [Training](#training)
+         * [Alternative Experiment: Keep 99\x of the Samples with Near Zero Steering](#alternative-experiment-keep-99-of-the-samples-with-near-zero-steering)
+         * [Prediction Performance Understanding](#prediction-performance-understanding)
+      * [Simulated Steering Performance](#simulated-steering-performance)
+      * [Major Factors to Reasonable Steering Performance](#major-factors-to-reasonable-steering-performance)
+      * [Concluding Remarks and Further Research](#concluding-remarks-and-further-research)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+
 ## Introduction
 
 The goals / steps of this project are the following:
